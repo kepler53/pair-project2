@@ -13,12 +13,15 @@
   	}
   	
   	.login-form div{
-  		width: 250px;
+  		width: 400px;
   		margin: 20px;
   	}
   	
+	
+  	
   	.form-group{
   		text-align: left;
+  		width : 400px;
   	}
   	
   	.modal-div header{
@@ -36,6 +39,11 @@
   clear:left;
   	float: right;
   }
+  
+  .pv-div > #pw-msg{
+  	text-align: left;
+  }
+  
 /*   중단파트 */
   figure {
     width: 100%;
@@ -104,6 +112,12 @@
   
   #input-serach{
   	margin-right: 40px;
+  }
+  
+  #city,#gu,#dong{
+  	height: 48px;
+  	margin-right: 2px;
+  	display: relative;
   }
   
   
