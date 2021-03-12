@@ -71,10 +71,13 @@
 			if($('#login_id').val() == "ssafy" && $('#login_pwd').val() =="1234"){
 				alert("로그인 성공!");
 				sessionStorage.setItem('login_id',$('#login_id').val());
-			} 
-			
-			
+			}
 		})
+		
+		
+		
+		
+		
 		
 	})
 	
@@ -119,6 +122,12 @@ html, body {
   padding: .25rem 1.5rem;
   font-size: 90%;
 }
+	
+  #city,#gu,#dong{
+      height: 48px;
+      margin-right: 2px;
+      display: relative;
+  }
 </style>
 
 </head>
@@ -172,7 +181,7 @@ html, body {
 					<form class="form-inline" id="frm" action="">
 						<!-- <input type="hidden" id="code"  name="code" value="code"/> -->
 						<div class="form-group md ">
-							<select class="form-control " name="city" id="city"
+							<select class="form-control mr-5 " name="city" id="city"
 								style="min-width: 130px">
 								<option value="all">도/광역시</option>
 								<option value="서울특별시">서울시</option>
