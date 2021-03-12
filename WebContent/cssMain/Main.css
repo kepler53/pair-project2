@@ -73,14 +73,19 @@
 
   }
   figure .overlay .description {
+<<<<<<< HEAD
     font-size: 20px;
     position: relative;
+=======
+/*     font-size: 20px; */
+    position: absolute;
+/* >>>>>>> branch 'master' of https://lab.ssafy.com/shining8543/0312_pair_project.git */
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+     text-align: center; 
   }
   
   figure:hover h4 {
