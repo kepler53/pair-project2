@@ -18,12 +18,38 @@
 	let map;
 	function initMap() {
 		map = new google.maps.Map(document.getElementById("map"), {
-			center : {
-				lat : 37.5013068,
-				lng : 127.037471
+			center : {				
+				lat : 37.5421527,
+				lng : 126.837778
 			},
-			zoom : 17
+			zoom : 15		
 		});
+	
+                //마커 이미지
+        var customicon = 'http://drive.google.com/uc?export=view&id=1tZgPtboj4mwBYT6cZlcY36kYaQDR2bRM'
+        	
+        	
+        	 var pin = { lat: 37.548062 ,lng: 126.8341962 };
+        	  new google.maps.Marker({
+        		    position: pin,
+        		    map: map,
+        		    label: "한화꿈에그린"
+        		  });
+        	 
+        	  var pin = { lat: 37.5480624   ,lng: 126.8407892 };
+        	  new google.maps.Marker({
+        		    position: pin,
+        		    map: map,
+        		    label: "우장산SK뷰"
+        		  });
+        	  
+        	  pin = { lat: 37.5526727 ,lng: 126.8478717 };
+        	  new google.maps.Marker({
+        		    position: pin,
+        		    map: map,
+        		    label: "강서 아이파크"
+        		  });
+		
 	}
 </script>
 
@@ -87,10 +113,20 @@ html, body {
     <div class="col-3 bd-sidebar">
     <h4 class="mt-2 font-weight-bold"> 매매 정보 </h4>
       <ul class="nav" id="sidebar_deal_list mt-5">
-        <li><a>아파트 매매 정보</a></li>
-        <li><a> 판다</a></li>
-        <li><a> 판다 </a></li>
-        <li><a> 산다</a></li>
+   
+        <li class="border"><a>서울시 강서구 화곡동 1151 우장산한화꿈에그린 1동3층<br>
+        	매매 : 10억 5000<br>
+        	아파트 / 148m^2</a>
+        </li>
+ 
+        <li class="border"><a>서울시 강서구 화곡동 980-21 강서아이파크<br>
+        	매매 : 5억 9500<br>
+        	아파트 / 98m^2</a>
+        </li>
+        <li class="border"><a>서울시 강서구 화곡동 1158 1동3층 우장산SK뷰<br>
+        	매매 : 8억 7,500 <br>
+        	아파트 104m^2</a>
+        </li>
       </ul>
       <br>
     </div>
