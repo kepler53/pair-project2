@@ -14,18 +14,33 @@
 <body class="container">
 
 <!-- 위의 모달을 통해 로그인 부분 구현 헤더바 시작 -->
+<div class="custom-header">
 <div class="container modal-div">
   <!-- Button to Open the Modal -->
   <span class="logout user"></span>
-  <button type="button" class="btn btn-primary login" data-toggle="modal" data-target="#loginModal">
+  
+  
+  
+  <header class="navbar navbar-expand navbar-dark bg-dark bd-navbar">
+  <div class="col-sm-8 text-left">
+  <a class="navbar-brand" href="#">이름</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  
+  </div>
+  <div class="col-sm-4">
+  <button type="button" class="btn btn-dark login" data-toggle="modal" data-target="#loginModal">
     Login
   </button>
-  <button type="button" class="btn btn-primary login" data-toggle="modal" data-target="#enrollModal">
+  <button type="button" class="btn btn-dark login" data-toggle="modal" data-target="#enrollModal">
     SingUp
   </button>
-  <button type="button" class="btn btn-primary logout" id="btn-logout">
+  <button type="button" class="btn btn-dark logout" style="display:none;" id="btn-logout">
     Logout
   </button>
+</div>
 	
   <!-- 로그인 모달 The Modal -->
   <div class="modal" id="loginModal">
@@ -128,13 +143,19 @@
       </div>
     </div>
   </div> 
+	</header>
 </div>
+</div>
+  
+  
+
 
 <!-- 중단 부분 시작 -->
+<div class="mt-3">
 <h4>당신의 부동산을 찾으세요</h4>
 	
 <!-- 	오버레이 -->
-  <div class="container">
+  <div class="container mt-3">
     <div class="row">
       <content class="col-md-12 col-lg-12 col-sm-12">
 
@@ -248,7 +269,7 @@
 <!--       </aside> -->
     </div>
   </div>
-  
+  </div>
  <!--       중단 부분 끝 -->
  
  <!-- 하단 Footer Start  -->

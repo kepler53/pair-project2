@@ -1,18 +1,12 @@
 /* 상단 login 파트 */
-	.login{
-		color: blue;
-		background-color: black;
-		border-color: white;
-	}
-	.logout{
-		display: none;
-		color: red;
-		background-color: white;
-		border-color: white;
-	}
+	
 	.modal-div{
 		background-color: white;
 		text-align: right;
+		float:right;
+		display:relative;
+		left:0px;
+		top:0px;
 	}
 	.login-form{
   		text-align: left;
@@ -27,8 +21,20 @@
   		text-align: left;
   	}
   	
+  	.modal-div header{
+  	display:relative;
+		left:0px;
+		top:0px;
+  	}
   	  .container content, .container aside {
     position: relative;
+  }
+  .custom-header{
+  overflow: hidden;
+  }
+  .header-right{
+  clear:left;
+  	float: right;
   }
 /*   중단파트 */
   figure {
