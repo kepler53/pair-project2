@@ -133,18 +133,24 @@
   
 		function checkPwd(response){
 			let id = $('#pwd-find').val();
-			
+			var flag=false;
+			var your_pwd;
   			$(response).find('user').each(function(index,item){
   				var dbId = $(this).find('id').text();
   				var dbPwd = $(this).find('password').text();
   				if(id==dbId){
-  					alert('비밀번호는'+dbPwd+'입니다.');
+  					your_pwd = dbPwd;
+  					flag=true;
   					return false;
   				}
   				
   				//존재하지않으면 아예 존재하지 창이 아예 닫힌다.
   			});
-			
+			if(flag){
+				alert("비밀번호는 "+your_pwd+"입니다 .");
+			}else{
+				alert("존재하지 않는 아이디 입니다.");
+			}
 			
 		}
   		

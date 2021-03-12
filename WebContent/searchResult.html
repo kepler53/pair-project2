@@ -51,6 +51,34 @@
         		  });
 		
 	}
+	
+	
+	$(document).ready(function(){
+		var login_state;
+		
+		login_id = sessionStorage.getItem('login_id');
+		console.log(login_id);
+		
+		
+		
+		
+		$('#city').val("서울특별시").prop("selected",true);
+		$('#gu').val("강서구").prop("selected",true);		
+		$("#dong").append('<option value="화곡동">화곡동</option>')
+		$("#dong").val("화곡동").prop("selected",true);
+		
+		$('#btn_login').click(function(){
+			if($('#login_id').val() == "ssafy" && $('#login_pwd').val() =="1234"){
+				alert("로그인 성공!");
+				sessionStorage.setItem('login_id',$('#login_id').val());
+			} 
+			
+			
+		})
+		
+	})
+	
+	
 </script>
 
 
@@ -97,10 +125,113 @@ html, body {
 <body>
 
 <header class="navbar navbar-expand navbar-dark bg-dark bd-navbar">
-  <a class="navbar-brand" href="#">이름</a>
+<div class="col-sm-10 text-left">
+  <a class="navbar-brand" href="http://localhost:8080/0312_pair_project/Main.html" id="btn_logo">이름</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
+    </div>
+  <div class="col-sm-2 text-right">
+  <span class="logout user"></span>
+  <button type="button" class="btn btn-dark login" data-toggle="modal" data-target="#loginModal">
+    Login
+  </button>
+  <button type="button" class="btn btn-dark login" data-toggle="modal" data-target="#enrollModal">
+    SignUp
+  </button>
+  <button type="button" class="btn btn-dark logout" style="display:none;" id="btn_logout">
+    Logout
+  </button>
+</div>
+
+ <!-- 로그인 모달 The Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">로그인</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        	  <form  class="login-form">
+			    <div class="form-group">
+			      <label for="ID">아이디:</label>
+			      <input type="text" class="form-control" id="login_id" placeholder="Enter ID" >
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">패스워드:</label>
+			      <input type="password" class="form-control" id="login_pwd" placeholder="Enter password">
+			    </div>
+			  </form>	
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="login_btn">Login</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- 회원가입 모달 -->
+  <div class="modal" id="enrollModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">회원가입</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+		<div class="container">
+
+		  <fieldset>
+		  <form >
+		    <div class="form-group">
+		      <label for="email">아이디</label>
+		      <input type="text" class="form-control" id="id" placeholder="가입하고자 하는 아이디를 입력하세요" name="id">
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">비밀번호</label>
+		      <input type="password" class="form-control" id="pwd" placeholder="영문 숫자 포함 6자리 이상" name="pswd" maxlength=20>
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">주소</label>
+		      <input type="password" class="form-control" id="address" placeholder="주소를 입력하세요" name="address" maxlength=20>
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">이름</label>
+		      <input type="text" class="form-control" id="name" placeholder="Name" name="name" maxlength=10>
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">전화번호</label>
+		      <input type="text" class="form-control" id="cellphone" placeholder="010-xxxx-xxxx" name="cellphone" maxlength=20>
+		    </div>
+
+		  </form>
+		  </fieldset>
+		</div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning" id="btn-submit" >등록</button>
+        </div>
+        
+      </div>
+    </div>
+  </div> 
 
 </header>
 
