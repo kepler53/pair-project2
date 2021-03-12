@@ -38,30 +38,63 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
+.bd-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1071;
+  min-height: 4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+.bd-sidebar {
+  position: sticky;
+  top: 4rem;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
+  background: #eee;
+  border-right: 1px solid rgba(0,0,0,.1);
+  overflow-y: auto;
+  min-width: 160px;
+  max-width: 500px;
+}
+.bd-sidebar .nav {
+  display: block;
+}
+.bd-sidebar .nav>li>a {
+  display: block;
+  padding: .25rem 1.5rem;
+  font-size: 90%;
+}
 </style>
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="#">이름</a>
 
-		<!-- Toggler/collapsibe Button -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+<header class="navbar navbar-expand navbar-dark bg-dark bd-navbar">
+  <a class="navbar-brand" href="#">이름</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		</div>
-	</nav>
-
-	<!--  지도 부분 -->
-	<div >
-		<div id="map" style="height:100%;">지도</div>
-	</div>
-	<!--  지도 부분 끝 -->
+</header>
 
 
+
+
+
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-3 bd-sidebar">
+    <h4 class="mt-2 font-weight-bold"> 매매 정보 </h4>
+      <ul class="nav" id="sidebar_deal_list mt-5">
+        <li><a>아파트 매매 정보</a></li>
+        <li><a> 판다</a></li>
+        <li><a> 판다 </a></li>
+        <li><a> 산다</a></li>
+      </ul>
+      <br>
+    </div>
+    <main class="col-9 py-md-3 pl-md-5 bd-content" role="main">
 	<!--  검색창 부분 -->
 	<div>
 		<div class="col-md-10 col-lg-8 col-xl-7 mt-5 mx-auto ">
@@ -142,9 +175,18 @@ html, body {
 		</div>
 	</div>
 	<!--  검색창 부분 끝 -->
+	
 
 
-
+	<!--  지도 부분 -->
+	<div class="테스트">
+		<div id="map" style="min-height: 1000px;">지도</div>
+	</div>
+	<!--  지도 부분 끝 -->
+	
+    </main>
+  </div>
+</div>
 
 </body>
 </html>
